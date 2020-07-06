@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ingredient;
+use App\User;
 use Illuminate\Http\Request;
 
 class IngredientController extends Controller
@@ -14,7 +15,11 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        return view('.ingredients/index');
+        $ingredients = Ingredient::all();
+
+        return view('ingredients.index', [
+            'ingredients' => $ingredients,
+        ]);
     }
 
     /**
@@ -24,7 +29,7 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        //
+        return view('ingredient.create');
     }
 
     /**

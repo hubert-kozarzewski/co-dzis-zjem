@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/ingredients' , 'IngredientController@index')->name('ingredients');
+Route::get('/ingredients' , 'IngredientController@index')->name('ingredients.index');
