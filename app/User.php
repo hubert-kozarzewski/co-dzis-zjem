@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function ingredients()
     {
-        return $this->hasMany(Ingredient::class);
+        return $this->hasMany(Ingredient::class, 'created_by');
     }
 }
